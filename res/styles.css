@@ -1,0 +1,67 @@
+body{
+  margin:0px;
+  background:radial-gradient(white 60%,rgba(255, 166, 0, 0.215))
+}
+*{
+  font-family:Satoshi;
+}
+
+#centercontent{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100vw;
+  gap:5px;
+}
+#title{
+  display:flex;
+  align-items: center;
+  gap:10px;
+  user-select:none;
+}
+#title img{
+  height:45px;
+  box-shadow:orange 0px 0px 15px 1px;
+  border-radius:10px;
+}
+#title h1{
+  font-weight:800;
+  font-size:45px;
+  margin:0px;
+}
+#subtext{
+  font-weight:500;
+  color:#333;
+  margin-bottom:10px;
+}
+#uploadbutton{
+  font-size:16px;
+  display:flex;
+  align-items: center;
+  gap:5px;
+  font-weight:600;
+  background:linear-gradient(90deg,#FFA70B,#F47D44);
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+}
+.inv{
+  filter:invert(1);
+}
+
+#uploadicon{
+  width:16px;
+  height:16px;
+  display:grid;
+  grid-template-columns: 16px;
+  grid-template-rows: 1fr 2.5px;
+}
+#uiarrow{
+  background-image:url("../icons/uploadarrow.svg");
+  background-size:16px;
+}
+#uploadicon *{
+  width:16px;
+}
