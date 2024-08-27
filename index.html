@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="res/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://itsfoxdev.github.io/resources/fonts/satoshi/import.css">
-    <script src="scripts.js" defer></script>
+    <script src="./js/imageconvert.js" defer></script>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +30,42 @@
     <meta property="twitter:image" content="./icons/banner.png" />
   </head>
   <body>
+    <div id="dropzone">
+      <input type="file" id="iconv" accept="image/*, .avif">
+    </div>
     <div id="centercontent">
+
       <div id="title">
         <img src="./icons/favicon.png" id="logo">
         <h1>Imagesnap</h1>
       </div>
+
       <span id="subtext">Drop an image to convert, or:</span>
-      <button id="uploadbutton"><div id="uploadicon"><div id="uiarrow" class="inv"></div><img class="inv" src="./icons/uploadline.svg"></div> Upload</button>
+
+      <button id="uploadbutton" onclick="imgInput.click();">
+        <div id="uploadicon">
+          <div id="uiarrow" class="inv"></div>
+          <img class="inv" src="./icons/uploadline.svg">
+        </div> Upload
+      </button>
+    </div>
+    <div id="formatsc">
+      <div id="formats">
+        <button onclick="sf('png',this)" class="active">PNG</button>
+        <button onclick="sf('jpg',this)">JPG</button>
+        <button onclick="sf('ico',this)">ICO</button>
+        <button onclick="sf('webp',this)">WEBP</button>
+        <button onclick="sf('dataurl',this)">Data URL</button>
+      </div>
+    </div>
+    <div id="overlay">
+      <div id="oc">
+        <span id="oicon">🔄</span>
+        <span id="ostatus">Converting...</span>
+      </div>
+    </div>
+    <div id="hidden">
+      <canvas style="display:none" id="myCanvas" width="1" height="1"></canvas>
     </div>
   </body>
 </html>
