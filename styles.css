@@ -66,7 +66,7 @@ body{
   grid-template-rows: 1fr 2.5px;
 }
 #uiarrow{
-  background-image:url("../icons/uploadarrow.svg");
+  background-image:url("./icons/uploadarrow.svg");
   background-size:16px;
   transition:transform .3s ease-in-out;
 }
