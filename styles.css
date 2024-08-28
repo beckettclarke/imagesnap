@@ -1,6 +1,22 @@
+:root{
+  --bg:white;
+  --fg:black;
+}
+html{
+  background:var(--bg);
+}
 body{
   margin:0px;
-  background:radial-gradient(white 60%,rgba(255, 166, 0, 0.215))
+  overflow:hidden;
+  background:radial-gradient(var(--bg) 60%,rgba(255, 166, 0, 0.093))
+}
+
+@media (prefers-color-scheme: dark) {
+  .inv{filter:none !important;}
+  :root{
+    --bg:black;
+    --fg:white;
+  }
 }
 *{
   font-family:Satoshi;
@@ -33,10 +49,12 @@ body{
   font-weight:800;
   font-size:45px;
   margin:0px;
+  color:var(--fg)
 }
 #subtext{
   font-weight:500;
-  color:#333;
+  color:var(--fg);
+  opacity:.7;
   margin-bottom:10px;
 }
 #uploadbutton{
@@ -46,7 +64,7 @@ body{
   gap:5px;
   font-weight:600;
   background:linear-gradient(90deg,#FFA70B,#F47D44);
-  color:white;
+  color:var(--bg);
   padding:10px 20px;
   border:none;
   border-radius:10px;
@@ -97,7 +115,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px dashed #ccc;
+  border: 4px dashed #79797960;
   color: #ccc;
   margin:10px;
   transition: background-color 0.3s ease;
@@ -140,14 +158,15 @@ body{
   padding: 0px 14px;
   font-weight:bold;
   cursor:pointer;
-  background:white;
+  background:var(--bg);
   border:2px solid #FA9231;
   border-radius:5px;
+  color:var(--fg);
   transition:background-color .2s,color .2s;
 }
 #formats button.active{
   background-color:#FA9231;
-  color:white;
+  color:var(--bg);
 }
 #overlay.active{
   opacity:1;
@@ -175,7 +194,8 @@ body{
   transition:scale .3s;
   width:250px;
   height:200px;
-  background:white;
+  background:var(--bg);
+  transition:background .2s;
   display:flex;
   border-radius:10px;
   display:flex;
@@ -193,4 +213,6 @@ body{
 #ostatus{
   font-size:20px;
   font-weight:600;
+  color:var(--fg);
+  transition:color .2s,background .2s;
 }

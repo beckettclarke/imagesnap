@@ -116,5 +116,5 @@ function done(e,t,d){
 // converting()
 function donedl(){done('📥','Downloaded!')}
 function donecp(){done('📋','Copied to clipboard!')}
-function errorns(){done('❌','Image not supported!',3E3)}
+function errorns(){done('❌','File not supported!',3E3)}
 // setTimeout(donecp,1E3);
