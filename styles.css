@@ -42,7 +42,7 @@ body{
 }
 #title img{
   height:45px;
-  box-shadow:orange 0px 0px 15px 1px;
+  /* box-shadow:orange 0px 0px 15px 1px; */
   border-radius:10px;
 }
 #title h1{
